@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "WebFit",
+    "slug": "WebFit",
+    "privacy": "public",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/splashIcon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "1.0.0",
+      "usesIcloudStorage": true,
+      "requireFullScreen": true
+    },
+    "android": {
+      "versionCode": 2
+    }
+  }
+}
