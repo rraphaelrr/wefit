@@ -7,7 +7,8 @@ export default {
   bckgScreenAll: '#F6F6F5',
   corIconesFooter: '#666666',
   bckgBtnSalvarUsuario: '#1976D2',
+  corDivisoria: '#DADADA',
+  colorIconLinguagem: '#F22828'
 
 
-  
 };

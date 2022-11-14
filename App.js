@@ -1,44 +1,36 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
-import { Transition } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { createAppContainer } from 'react-navigation';
+import { registerRootComponent } from 'expo';
 import * as Font from 'expo-font';
-
-import Home from './screens/home/home';
-import Favoritos from './screens/favoritos/favoritos';
+import { NavigationContainer } from '@react-navigation/native';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
 
+import { createStackNavigator } from '@react-navigation/stack';
+import Home from './screens/home/Home';
+import Favoritos from './screens/favoritos/Favoritos';
+const Stack = createStackNavigator();
 
-const mainNavigation = createAnimatedSwitchNavigator(
-  {
+function Rota() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Favoritos" component={Favoritos} />
+      </Stack.Navigator>
+    </NavigationContainer>
 
-    Home,
-    Favoritos
-  },
-  {
-    transition: (
-      <Transition.Together>
-        <Transition.Out
-          type="slide-right"
-          durationMs={200}
-          interpolation="easeIn"
-        />
-        <Transition.In type="fade" durationMs={200} />
-      </Transition.Together>
-    ),
-  },
-);
-const App = createAppContainer(mainNavigation);
+  );
+}
 
-export default class Appp extends React.Component {
-  constructor(props) {
-    super(props);
 
-  }
+
+
+
+export default class App extends React.Component {
+
 
 
   loadFonts = async () => {
@@ -63,14 +55,16 @@ export default class Appp extends React.Component {
 
         <Header />
 
-        <App />
 
+        <Rota />
 
-        <Footer />
+        <Footer navigation={this.props.navigation}/>
+
 
       </SafeAreaView>
     )
 
   }
 }
+
 

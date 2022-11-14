@@ -22,7 +22,13 @@
       "requireFullScreen": true
     },
     "android": {
-      "versionCode": 2
+      "versionCode": 2,
+      "package": "com.rraphaelrr.WebFit"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "55323fd2-8046-4f21-b3f9-a881da517a7d"
+      }
     }
   }
 }

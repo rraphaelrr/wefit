@@ -13,7 +13,7 @@ const style_home = {
   styles: StyleSheet.create({
     container: {
       width,
-      height,
+      height: '100%',
       backgroundColor: FolhaStyle.bckgScreenAll
     },
 
@@ -30,23 +30,86 @@ const style_home = {
       width: '90%',
       marginLeft: 20,
       backgroundColor: FolhaStyle.brancoPadrao,
-      height: "20%"
+      height: height / 5,
+      marginBottom: 20
     },
-
+    
     cabecalhoRepositorios: {
       paddingTop: 10,
       paddingHorizontal: 10,
       flex: 1,
       flexDirection: 'row',
       flexWrap: 'wrap',
-     
+
+    },
+    titleRepositorio: {
+      marginTop: 10,
+      marginLeft: 10
     },
     iconWebFit: {
       flex: 1,
       flexDirection: 'row',
       justifyContent: 'flex-end',
     },
-   
+    
+    divisoria: {
+      width: '95%',
+      flex: 1,
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      position: 'absolute',
+      marginLeft: 20,
+      marginTop: 60,
+      borderBottomColor: FolhaStyle.corDivisoria,
+      borderBottomWidth: StyleSheet.hairlineWidth
+    },
+
+    dadosRepositorio: {
+      width: '95%',
+      flex: 1,
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      marginLeft: 20,
+      marginTop: 20,
+    },
+    
+
+    rodapeRepositorio: {
+      flex: 1,
+      flexDirection: 'row',
+      
+    },
+
+    btnFavoritarRepositorio: {
+      backgroundColor: FolhaStyle.bckgBtnFavoritar,
+      height: '70%',
+      width: '30%',
+      marginLeft: 20,
+      fontWeight: 'bold',
+      
+    },
+    iconTextFavoritar:{
+      flex: 1,
+      flexDirection: 'row',
+      marginLeft: 35
+    },
+
+    textFooterFavoritado: {
+      marginLeft: 10,
+      marginTop: 10
+    },
+
+    iconTextLinguagem:{
+      flex: 1,
+      flexDirection: 'row',
+       
+    },
+
+    textFooterLinguagem: {
+      marginLeft: 10,
+      marginTop: 10,
+      fontWeight: 'regular'
+    },
   }),
 
 }

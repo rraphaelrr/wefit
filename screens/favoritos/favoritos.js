@@ -36,5 +36,7 @@ export default class Favoritos extends Component {
 }
 
 AppRegistry.registerComponent('Favoritos', () => Favoritos);
+  
+
 
 
